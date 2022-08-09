@@ -199,7 +199,7 @@ GRANT ALL PRIVILEGES ON tooling.* TO 'webaccess'@'%' WITH GRANT OPTION
 
 ```
 SELECT USER,HOST FROM mysql.user;
-HOW DATABASES
+SHOW DATABASES
 ```
 
 ![](images/DB.png)
@@ -390,10 +390,12 @@ filled in the details correctly, ip address, username, password and database nam
 
 - Apply tooling-db.sql script to your database using this command mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
 
-- sudo setsebool -P httpd_can_network_connect=1
-- sudo setsebool -P httpd_can_network_connect_db=1
-- sudo setsebool -P httpd_execmem=1
-- sudo setsebool -P httpd_use_nfs 1
+ ```
+sudo setsebool -P httpd_can_network_connect=1
+sudo setsebool -P httpd_can_network_connect_db=1
+sudo setsebool -P httpd_execmem=1
+sudo setsebool -P httpd_use_nfs 1
+```
 
 -  connected to the database from the tooling folder
 
